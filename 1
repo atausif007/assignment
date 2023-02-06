@@ -1,0 +1,6 @@
+FROM node:10
+COPY . .
+RUN npm install
+RUN npm run build
+RUN CI=true
+CMD ["npm", "start"]
